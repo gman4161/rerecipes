@@ -30,11 +30,8 @@ if(!session_id()) session_start();
     <?php include("header.php");?>
     <body>
         <main class="addPadding">
-            <h3>Welcome to the D&amp;D Player Stat Tracker!</h3>
-            Here you can create an account and have access to
-            all of the unique stories of each of your
-            characters. You'll also get to skip out on the
-            math!
+            <h3>Welcome!</h3>
+            Here 
         </main>
         <form class="addPadding" method="POST" action="./php/login.php">
             <fieldset id="login">
@@ -67,5 +64,4 @@ if(!session_id()) session_start();
             </fieldset>
         </form>
     </body>
-<!--This is the default footer-->
 </html>

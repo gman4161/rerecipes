@@ -13,15 +13,15 @@
             //echo "<script> alert('Enter a password');</script>";
             goBack("Password was blank");
         }else{
-            $sql = "SELECT * FROM account WHERE Username='$uname' AND Password='$pass'";
+            $sql = "SELECT * FROM account WHERE username='$uname' AND password='$pass'";
             $result = query($sql);
             if (mysqli_num_rows($result) === 1) {
                 $row = mysqli_fetch_assoc($result);
-                if ($row['Username'] === $uname && $row['Password'] === $pass) {
+                if ($row['username'] === $uname && $row['password'] === $pass) {
                     echo "Logged in!";
-                    $_SESSION['Username'] = $row['Username'];
+                    $_SESSION['username'] = $row['username'];
                     $_SESSION['userID'] = $row['idAccount'];    
-                    header("Location: ../chooseChar.php");
+                    header("Location: ../template.php");
                     exit();
                 }else{
                     //echo "<script> alert('Incorect User name or password');</script>";

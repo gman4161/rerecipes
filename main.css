@@ -1,0 +1,93 @@
+/* Garrett Engel September 2023 ReRecipes style sheet
+
+margin: top right down left
+border: width style color
+
+*/
+
+:root{
+    --headerHeight: 150px;
+    --footerHeight: 50px;
+    --bgColor: #AAAAAA;
+    --borderWidth: 3px;
+    --border: var(--borderWidth) solid #000;
+}
+
+body {
+    margin: 0 0 0 0;
+    margin-top: calc(var(--headerHeight) + var(--borderWidth));
+    margin-bottom: calc(var(--footerHeight) + var(--borderWidth));
+}
+
+main {
+    margin: 0px 0px 0px 0px;
+    margin-top: var(--headerHeight);
+    margin-bottom:var(--footerHeight); /*save room for footer*/
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--headerHeight);
+    background-color: var(--bgColor);
+    border-bottom: var(--border);
+
+}
+header a {
+    text-decoration: inherit;
+    color: inherit;
+}
+header h1, header nav, header p{
+    margin: 10 10 10 10;
+}
+
+footer {
+    position: fixed;
+    height: var(--footerHeight);
+    background-color: var(--bgColor);
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    border-top: var(--border);
+}
+footer small{
+    position: relative;
+    margin: 10px 20px
+}
+
+button {
+    color: bold;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+button:hover{
+    transition: 0.2s;
+    background: var(--bgColor);
+    border-radius: 0px
+}
+
+button::after{
+    transition: 2s;
+}
+
+input{
+    margin-top: 5px;
+}
+
+.headRight{
+    color:blue;
+    background-color: purple;
+}
+
+
+.module {
+    border: 1px solid #000 ;
+    margin: 5px;
+    padding: 5px;
+}
